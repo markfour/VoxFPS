@@ -68,7 +68,7 @@ public class ClickToDestroy : MonoBehaviour
 				// If we hit a solid voxel then create an explosion at this point.
 				if (hit) {					
 					int range = 1;
-					DestroyVoxels (pickResult.volumeSpacePos.x, pickResult.volumeSpacePos.y, pickResult.volumeSpacePos.z, range);
+//					DestroyVoxels (pickResult.volumeSpacePos.x, pickResult.volumeSpacePos.y, pickResult.volumeSpacePos.z, range);
 				}
 
 				// Set this flag so the click won't be processed again next frame.
