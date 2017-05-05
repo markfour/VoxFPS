@@ -54,6 +54,26 @@ public class ClickToDestroy : MonoBehaviour
 				// Set this flag so the click won't be processed again next frame.
 				isMouseAlreadyDown = true;
 			}
+		} else if (Input.GetMouseButton (1)) {
+			if (!isMouseAlreadyDown) {
+				// Build a ray based on the current mouse position
+				Vector2 mousePos = Input.mousePosition;
+				Ray ray = Camera.main.ScreenPointToRay (new Vector3 (mousePos.x, mousePos.y, 0));
+
+
+				// Perform the raycasting. If there's a hit the position will be stored in these ints.
+				PickVoxelResult pickResult;
+				bool hit = Picking.PickFirstSolidVoxel (coloredCubesVolume, ray, 1000.0f, out pickResult);
+
+				// If we hit a solid voxel then create an explosion at this point.
+				if (hit) {					
+					int range = 1;
+					DestroyVoxels (pickResult.volumeSpacePos.x, pickResult.volumeSpacePos.y, pickResult.volumeSpacePos.z, range);
+				}
+
+				// Set this flag so the click won't be processed again next frame.
+				isMouseAlreadyDown = true;
+			}
 		} else {
 			// Clear the flag while we wait for a click.
 			isMouseAlreadyDown = false;
