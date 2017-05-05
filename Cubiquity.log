@@ -2,3 +2,7 @@
 *                             Initializing Cubiquity                           *
 ********************************************************************************
 [18:30:47, Info   ]: Creating voxel database from 'C:/Users/markfour/Documents/GitHub/VoxFPS/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensColoredCubes.vdb'
+[18:32:50, Info   ]: Creating voxel database from 'C:/Users/markfour/Documents/GitHub/VoxFPS/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensColoredCubes.vdb'
+[18:32:55, Info   ]: Resizing compressed data buffer to 144307bytes. This should only happen once
+[18:32:55, Info   ]: Creating voxel database from 'C:/Users/markfour/Documents/GitHub/VoxFPS/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensColoredCubes.vdb'
+[18:33:55, Info   ]: Creating voxel database from 'C:/Users/markfour/Documents/GitHub/VoxFPS/Assets/StreamingAssets/Cubiquity/VoxelDatabases/Examples/VoxeliensColoredCubes.vdb'
