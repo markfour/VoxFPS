@@ -47,7 +47,7 @@ public class ClickToDestroy : MonoBehaviour
 				
 				// If we hit a solid voxel then create an explosion at this point.
 				if (hit) {					
-					int range = 5;
+					int range = 1;
 					DestroyVoxels (pickResult.volumeSpacePos.x, pickResult.volumeSpacePos.y, pickResult.volumeSpacePos.z, range);
 				}
 				
@@ -144,6 +144,9 @@ public class ClickToDestroy : MonoBehaviour
 
 							if (IsSurfaceVoxel (x, y, z)) {
 								GameObject cube = GameObject.CreatePrimitive (PrimitiveType.Cube);
+								Destroy (cube, 0.1f);
+								break;
+
 								cube.AddComponent<Rigidbody> ();
 								cube.transform.parent = coloredCubesVolume.transform;
 								cube.transform.localPosition = new Vector3 (x, y, z);
